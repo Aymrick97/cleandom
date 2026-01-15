@@ -15,6 +15,17 @@
         .color-brand-orange { color: #F59E0B; }
         .bg-brand-orange { background-color: #F59E0B; }
         .bg-brand-blue { background-color: #1E3A8A; }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-item.active .faq-content {
+            max-height: 200px; /* Ajuster selon la longueur du texte */
+        }
+        .faq-item.active i {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-gray-50">
@@ -142,6 +153,114 @@
             </div>
         </div>
     </section>
+    <section id="faq" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <div class="text-center mb-16">
+                <h3 class="text-orange-500 font-bold uppercase tracking-widest text-sm mb-2">Foire aux questions</h3>
+                <h4 class="text-3xl md:text-4xl font-extrabold text-blue-900">Tout savoir sur nos services</h4>
+                <div class="w-24 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-4">
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Intervenez-vous sur toute la Guadeloupe ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white transition-all duration-300">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            Oui, nous couvrons l'ensemble de l'île : Grande-Terre, Basse-Terre et les zones environnantes. Peu importe votre localisation, CLEAN'DOM vient à vous.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Quels sont vos jours d'intervention ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            Nous sommes disponibles **7 jours sur 7**. Nous adaptons nos horaires à votre emploi du temps pour un service sans contrainte.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Comment se passe la récupération du linge à l'hôpital ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            C'est simple : vous nous appelez, nous passons récupérer votre linge directement à votre chambre ou à l'accueil. Une fois lavé, séché et plié, nous vous le ramenons sous 24h à 48h.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Le devis est-il gratuit ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            Absolument. Nous évaluons vos besoins (surface, type de bien, fréquence) et vous proposons une estimation gratuite et sans engagement.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Fournissez-vous les produits de nettoyage ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            Oui, CLEAN'DOM arrive avec tout le matériel et les produits professionnels nécessaires pour garantir un résultat impeccable.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Gérez-vous le ménage entre deux vacanciers ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            C'est notre spécialité pour les bungalows et villas. Nous assurons un nettoyage complet et une mise en place parfaite pour l'arrivée de vos prochains clients.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Comment sont calculés vos tarifs ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            Nos prix dépendent du type de prestation (nettoyage vs blanchisserie) et de la taille du bien. Nous restons très compétitifs pour offrir un service accessible à tous en Guadeloupe.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item group border border-gray-200 rounded-2xl overflow-hidden transition-all duration-300 hover:border-orange-300 shadow-sm">
+                    <button class="w-full px-6 py-5 text-left flex justify-between items-center bg-white hover:bg-orange-50/50 transition" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg text-blue-900">Peut-on commander un nettoyage en urgence ?</span>
+                        <i class="fas fa-chevron-down text-orange-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-content bg-white">
+                        <div class="px-6 pb-6 text-gray-600 leading-relaxed">
+                            Oui, selon nos disponibilités, nous pouvons intervenir rapidement (sous 24h) pour des situations imprévues ou des emménagements de dernière minute.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <section class="bg-blue-900 py-16 text-white text-center">
         <div class="container mx-auto px-4">
@@ -189,6 +308,27 @@
             &copy; 2026 CLEAN'DOM. Tous droits réservés. Guadeloupe. 
         </div>
     </footer>
+    <script>
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // On vérifie si l'item est déjà actif
+            const isActive = item.classList.contains('active');
 
+            // Fermer tous les autres
+            document.querySelectorAll('.faq-item').forEach(el => {
+                el.classList.remove('active');
+                el.querySelector('.faq-content').style.maxHeight = '0px';
+            });
+
+            // Si l'item n'était pas actif, on l'ouvre
+            if (!isActive) {
+                item.classList.add('active');
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+        }
+    </script>
 </body>
 </html>
